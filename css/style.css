@@ -1,0 +1,247 @@
+.center {
+    text-align: center;
+    margin-right: 10px;
+}
+ .container{
+     padding: 0;
+ }
+
+.firstH{
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+}
+
+.textvalue{
+    width: 100%;
+    height: 200px;
+    margin: 20px 0 20px 0;
+}
+
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="re_password"]{
+    border: 1px #C5C5C5 solid;
+    background: #fff;
+    width:100%;
+
+    font: 14px/35px Tahoma, Arial, sans-serif;
+    color: #8A8A8A;
+}
+
+form input[type="text"].error,
+form input[type="email"].error,
+form input[type="password"].error,
+form input[type="re_password"].error {
+    border-color: #FFA9C7;
+}
+
+form input[type="password"],
+form input[type="text"],
+form input[type="email"],
+form input[type="re_password"] {
+    display: block;
+    width: 100%;
+    height: 48px;
+    padding: 0 15px;
+    margin: 0 20px 20px 0;
+    float: left;
+}
+
+
+.butto{
+    padding: 0 30px;
+    height: 40px;
+    float: right;
+    border: none;
+    background: #00C2F1;
+    
+    cursor: pointer;
+
+    font: 14px/35px Tahoma, Arial, sans-serif;
+    color: #00566B;
+}
+
+
+.logosize1{
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+
+}
+
+.top{
+    border-top: solid #808099 0.5px;
+    background-color: #EEE;
+    padding: 0;
+}
+
+.marT{
+    margin-top: 40px; 
+}
+
+.leftSide{
+    background-color: snow;
+    height: 100%;
+    margin-left: 0;
+
+}
+
+.firstBarElement{
+    font-size: 15px;
+    color: grey ;  
+}
+
+.header{
+    margin-top: 30px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: grey;
+    
+}
+
+.headerP{
+    margin-bottom: 50px;
+    color: gray;
+
+}
+
+.centerBox{
+
+    background-color: white;
+    height: 90%;
+    padding: 0px;
+
+}
+
+.boxText{
+    text-align: right;
+    font-size: 15px;
+    color: grey;
+    padding-top: 15px;
+}
+
+.topHeader{
+    font-size: 25px;
+    padding-top: 30px;
+    padding-left: 15px;
+
+}
+
+.step{
+    float: left;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    height: 48px;
+}
+
+.topTool{
+    list-style-type: none;
+    padding: 0;
+    border-bottom: solid #EEE 0.5px;
+    height: 48px;
+}
+
+
+
+.rSight1{
+    border: 24px solid transparent;
+    border-left: 14px solid #e0e0e0;
+    border-right: 0;
+    display: block;
+    position: absolute;
+    left:70px;
+    top: 0;
+    z-index: 1;
+    
+}
+
+
+
+.rSight{
+    border: 24px solid transparent;
+    border-left: 14px solid white;
+    border-right: 0;
+    display: block;
+    position: absolute;
+    left:69px;
+    top: 0;
+    z-index: 1;
+    
+}
+
+.l1{
+    left:138px;
+     border-left: 14px solid #999999;
+}
+
+.l1_1{
+    left:139px;
+     border-left: 14px solid #e0e0e0;
+}
+
+.l1_2{
+    left: 138px;
+    border-left: 14px solid white;
+}
+
+.l2{
+    left:207px;
+    border-left: 14px solid #999999;
+}
+
+.l2_2{
+    left:207px;
+    border-left: 14px solid white;
+}
+
+.l2_1{
+    left:208px;
+    border-left: 14px solid #e0e0e0;
+}
+
+.l2_2{
+    left: 207px;
+    border-left: 14px solid white;
+}
+
+.l3{
+    left:69px;
+     border-left: 14px solid #999999;
+}
+
+.l3_1{
+    left:70px;
+     border-left: 14px solid #e0e0e0;
+}
+
+
+.nclick{
+    background-color: #999999;
+}
+
+.SecondStepText{
+    margin-top: 20px;
+
+}
+
+.button2{
+    border-radius: 50%;
+    background-color: lawngreen;
+    margin-top: 20px;
+    height: 30px;
+    width: 50px;
+
+}
+
+.button2_1{
+    border-radius: 50%;
+    background-color: red;
+    margin-top: 20px;
+    height: 30px;
+    width: 50px;
+
+}
+
