@@ -1,0 +1,1 @@
+Tabela klientów
