@@ -6,27 +6,21 @@ console.log(butto);
 
 
 
-function buttonChange(){
+function buttonChange(but){
 
-    if(butto.className === "button2") {
-        butto.classList.remove("button2");
-        butto.classList.add("button2_1");
-        butto.textContent = "Nie";
+    if(but.className === "button2") {
+        but.classList.remove("button2");
+        but.classList.add("button2_1");
+        but.textContent = "Nie";
     } else {
-         butto.classList.add("button2");
-        butto.classList.remove("button2_1");
-        butto.textContent = "Tak";
+         but.classList.add("button2");
+        but.classList.remove("button2_1");
+        but.textContent = "Tak";
     }
 
 }
 
-butto.addEventListener("click" ,function(e){
 
-
-
-   buttonChange();
-
-});
 
 function buttonChange1(){
 
@@ -65,10 +59,28 @@ function buttonChange2(){
 
 }
 
-butto2.addEventListener("click" ,function(e){
+butto.addEventListener("click" ,function(but){
 
-
-
-   buttonChange2();
+   buttonChange();
 
 });
+
+butto1.addEventListener("click" ,function(but){
+
+
+
+   buttonChange();
+
+});
+
+
+
+
+butto2.addEventListener("click" ,function(but){
+
+
+
+   buttonChange();
+
+});
+
