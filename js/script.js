@@ -1,108 +1,102 @@
-(function(){
-
-    var form = document.querySelector("#myForm"),
-        fields = form.querySelectorAll("[data-error]"),
-        pass = form.querySelector("#passw");
-
-function isNotEmpty(field) {
-
-    return field.value !== "";
-        
-}
-
-function isAtLeast(field, min) {
-
-    return field.value.length >= min;
-}
-
-function isEmail(field) {
-
-    return field.value.indexOf("@") !== -1;
-
-}
-
-function isTheSame(field) {
-
-    return pass.value !== fields[2].value;
+(function () {
     
 
-}
 
+var tab = document.querySelector("#myTable"),
+    ths = tab.querySelectorAll("thead th"),
+    trs = tab.querySelectorAll("tbody tr");
+    
+/* 
 
-
-function displayErrors(errors) {
-
-    var ul = document.querySelector("ul.errors");
-
-    if(!ul) {
-
-        ul = document.createElement("ul");
-
-        ul.classList.add("errors");
-
-    }
-
-    ul.innerHTML = "";
-
-    errors.forEach(function(error){
-
-    var li = document.createElement("li");
-
-        li.textContent = error;
-
-        ul.appendChild(li);
-    });
-
-form.parentNode.insertBefore(ul, form);
-
-}
-
-
-
-
-form.addEventListener("submit", function(e){
-
-    e.preventDefault();
-
-    var errors = [];
-
-    for( var i = 0; i < fields.length; i++){
-
-       var  field = fields[i],
-            isValid = false;
-
-       
-        if(field.type === "text"){
-            isValid = isNotEmpty(field);
-       } else  if(field.type === "email"){
-            isValid = isEmail(field);
-       } else if(field.type === "password"){
-            isValid = isAtLeast(field, 5);
-        } 
-        
-       
-
-
-
-        if (!isValid) {
-            field.classList.add("error");
-            errors.push(field.dataset.error);
+    for(i=0; i < trs.length ; i++){
+        if( i % 2 == 0){
+            trs[i].classList.add("color1"); 
         } else {
-            field.classList.remove("error");
+            trs[i].classList.add("color2"); 
         }
+
     }
 
-    if(errors.length > 0){
-        displayErrors(errors);
-    } else {
-        form.submit();
+*/    
+
+function clearclassName(nodeList){
+
+    for (i = 0 ; i < nodeList.length; i++){
+
+        nodeList[i].className = " ";
+
+    } 
+}
+
+
+
+    console.log(ths);
+    function makeArray (nodeList){
+
+        var arr = [];
+        for (var i = 0 ; i < nodeList.length; i++) {
+
+            arr.push(nodeList[i]);
+        }
+
+        return arr;
+
+    }
+
+    function sortBy(e) {
+        var target = e.target,
+            thsArr = makeArray(ths),
+            trsArr = makeArray(trs),
+            index = thsArr.indexOf(target),
+            df = document.createDocumentFragment(),
+            order = (target.className === "" || target.className === "desc") ? "asc" : "desc" ;
+
+
+
+            console.log(order);
+        trsArr.sort(function(a, b){
+            
+        var tdA = a.children[index].textContent,
+            tdB = b.children[index].textContent;
+
+            if(tdA < tdB){
+                return (target.className === "asc") ? -1 : 1;
+            } else if(tdA > tdB){
+                return (target.className === "asc") ? 1 : -1;
+            } else {
+                return 0;
+            }
+            
+          
+         
+        });
+
+         clearclassName(ths);
+
+            trsArr.forEach(function(tr){
+                df.appendChild(tr);
+
+            })
+            target.className = order;
+            tab.querySelector("tbody").appendChild(df);
+     /*       console.log(trsArr); */
+
+
+
+
+    }
+
+    for(var j = 0; j < ths.length; j++) {
+
+        ths[j].onclick = sortBy;
+        console.log(tab);
+
     }
 
 
-    console.log(fields[2].value);
-    console.log(fields[3].value);
-    console.log(pass.value);
-    console.log(errors);
-}, false);
- 
+
+
+
+
+
 })();
