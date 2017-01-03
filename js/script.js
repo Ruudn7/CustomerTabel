@@ -6,7 +6,7 @@ var tab = document.querySelector("#myTable"),
     ths = tab.querySelectorAll("thead th"),
     trs = tab.querySelectorAll("tbody tr");
     
-/* 
+/*
 
     for(i=0; i < trs.length ; i++){
         if( i % 2 == 0){
@@ -89,7 +89,6 @@ function clearclassName(nodeList){
     for(var j = 0; j < ths.length; j++) {
 
         ths[j].onclick = sortBy;
-        console.log(tab);
 
     }
 

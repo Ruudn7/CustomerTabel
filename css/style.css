@@ -98,7 +98,7 @@ padding-left: 5px;
     height: 30px;
 }
 
-
+/*
 
 table th:after {
     content: "";
@@ -110,17 +110,19 @@ table th:after {
     
     top: 50%;
     right: 20px;
+   
+}
+ */
+.bsc {
+    width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid red;
     
 }
+    
 
-table th.asc:after {
-    display: block;
-    border-style: solid;
-    border-width: 0 5px 10px 5px;
-    border-color: transparent transparent #E2E2E2 transparent;
-    
-    
-}
 
 table th.desc:after {
     display: block;
