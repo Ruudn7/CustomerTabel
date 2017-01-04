@@ -98,7 +98,7 @@ padding-left: 5px;
     height: 30px;
 }
 
-/*
+
 
 table th:after {
     content: "";
@@ -112,7 +112,10 @@ table th:after {
     right: 20px;
    
 }
- */
+
+table th{
+    width: 33%;
+}
 .bsc {
     width: 0;
 	height: 0;
@@ -124,7 +127,7 @@ table th:after {
     
 }
     
-.asc {
+.asd {
     width: 0;
 	height: 0;
 	border-left: 5px solid transparent;
