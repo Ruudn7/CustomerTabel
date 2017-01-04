@@ -24,6 +24,18 @@ var tab = document.querySelector("#myTable"),
 
 */    
 
+cleanArrowOnHeader()
+
+function cleanArrowOnHeader(clickedElement) {
+
+    var clicked = clickedElement || '';
+
+    ths.forEach(function(e) {
+        if(e !== clicked)
+            e.children[0].className = '';
+    });
+}
+
 function clearclassName(nodeList){
 
     for (i = 0 ; i < nodeList.length; i++){
@@ -51,49 +63,51 @@ function clearclassName(nodeList){
     function sortBy(e) {
         var target = e.target,
             targetSort = e.target[2],
+            targetChildren = target.children[0],
             thsArr = makeArray(ths),
             trsArr = makeArray(trs),
             index = thsArr.indexOf(target),
             df = document.createDocumentFragment(),
             order = (target.className === "" || target.className === "desc") ? "asc" : "desc" ;
-            console.log(target);
-
-
-            console.log(order);
-        trsArr.sort(function(a, b){
             
-        var tdA = a.children[index].textContent,
-            tdB = b.children[index].textContent;
 
-            if(tdA < tdB){
-                return (target.className === "asc") ? -1 : 1;
-            } else if(tdA > tdB){
-                return (target.className === "asc") ? 1 : -1;
-            } else {
-                return 0;
-            }
+
+
+            console.log('Tablica',trsArr);
+            trsArr.sort(function(a, b){
             
-          
+                var tdA = a.children[index].textContent,
+                    tdB = b.children[index].textContent;
+
+                    if(tdA < tdB){
+                        return (target.className === "asc") ? -1 : 1;
+                    } else if(tdA > tdB){
+                        return (target.className === "asc") ? 1 : -1;
+                    } else {
+                        return 0;
+                    }
          
-        });
-/*
-    function sortDirection(e){
+            });
+
+        clearclassName(ths);
+
+        trsArr.forEach(function(tr){
+
+            df.appendChild(tr);
+        })
+
+        target.className = order;
+        tab.querySelector("tbody").appendChild(df);
 
 
 
-    }
-*/
-         clearclassName(ths);
 
-            trsArr.forEach(function(tr){
-                df.appendChild(tr);
+        cleanArrowOnHeader(target)
 
-            })
-            target.className = order;
-            tab.querySelector("tbody").appendChild(df);
-     /*       console.log(trsArr); */
-
-
+        if(targetChildren.className === 'bsc')
+            targetChildren.className = 'asd';
+        else
+            targetChildren.className = 'bsc';
 
 
     }
@@ -106,7 +120,7 @@ function clearclassName(nodeList){
     }
 
 
-
+       
 
 
 
