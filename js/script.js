@@ -5,7 +5,12 @@
 var tab = document.querySelector("#myTable"),
     ths = tab.querySelectorAll("thead th"),
     trs = tab.querySelectorAll("tbody tr");
-    
+    UserN = tab.querySelector("#Name")
+    UserLN = tab.querySelector("#LastName")
+    UserAg = tab.querySelector("#Age")
+    console.log(UserN);
+    console.log(UserLN);
+    console.log(UserAg);
 /*
 
     for(i=0; i < trs.length ; i++){
@@ -45,12 +50,13 @@ function clearclassName(nodeList){
 
     function sortBy(e) {
         var target = e.target,
+            targetSort = e.target[2],
             thsArr = makeArray(ths),
             trsArr = makeArray(trs),
             index = thsArr.indexOf(target),
             df = document.createDocumentFragment(),
             order = (target.className === "" || target.className === "desc") ? "asc" : "desc" ;
-
+            console.log(target);
 
 
             console.log(order);
@@ -70,7 +76,13 @@ function clearclassName(nodeList){
           
          
         });
+/*
+    function sortDirection(e){
 
+
+
+    }
+*/
          clearclassName(ths);
 
             trsArr.forEach(function(tr){
@@ -89,6 +101,7 @@ function clearclassName(nodeList){
     for(var j = 0; j < ths.length; j++) {
 
         ths[j].onclick = sortBy;
+      //  ths[j].onclick = sortDirection;
 
     }
 
