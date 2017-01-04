@@ -49,7 +49,7 @@ function clearclassName(nodeList){
             trsArr = makeArray(trs),
             index = thsArr.indexOf(target),
             df = document.createDocumentFragment(),
-            order = (target.className === "" || target.className === "desc") ? "asc" : "desc" ;
+            order = (target.className === "" || target.className === "desc col-md-4") ? "asc col-md-4" : "desc col-md-4" ;
 
 
 
@@ -60,9 +60,9 @@ function clearclassName(nodeList){
             tdB = b.children[index].textContent;
 
             if(tdA < tdB){
-                return (target.className === "asc") ? -1 : 1;
+                return (target.className === "asc col-md-4") ? -1 : 1;
             } else if(tdA > tdB){
-                return (target.className === "asc") ? 1 : -1;
+                return (target.className === "asc col-md-4") ? 1 : -1;
             } else {
                 return 0;
             }

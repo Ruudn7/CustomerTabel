@@ -118,19 +118,33 @@ table th:after {
 	height: 0;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
-	border-bottom: 10px solid red;
+	border-bottom: 10px solid #EEE;
+    margin-top: 4px;
+    
     
 }
     
+.asc {
+    width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid #EEE;
+    margin-top: 4px;
+    
+    
+}
+   
 
 
+/*
 table th.desc:after {
     display: block;
     border-style: solid;
     border-width: 10px 5px 0 5px;
     border-color: #E2E2E2 transparent transparent transparent;
 }
-
+*/
 table tr:nth-child(even) td {
     background-color: #EEE;
     height: 30px;
@@ -144,4 +158,8 @@ table tr:nth-child(odd) td {
 table th {
     border-right:solid 0.5px #808088;
     padding-left: 10px;
+}
+
+.left{
+    left: 170px;
 }
